@@ -1,4 +1,3 @@
-﻿
 Partial Class Po_Go
     Inherits System.Windows.Forms.Form
     
