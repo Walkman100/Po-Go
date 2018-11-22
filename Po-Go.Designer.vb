@@ -101,6 +101,7 @@ Partial Class Po_Go
         '
         'btnA1
         '
+        Me.btnA1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA1.Location = New System.Drawing.Point(12, 12)
         Me.btnA1.Name = "btnA1"
         Me.btnA1.Size = New System.Drawing.Size(75, 75)
@@ -109,6 +110,7 @@ Partial Class Po_Go
         '
         'btnB1
         '
+        Me.btnB1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB1.Location = New System.Drawing.Point(93, 12)
         Me.btnB1.Name = "btnB1"
         Me.btnB1.Size = New System.Drawing.Size(75, 75)
@@ -117,6 +119,7 @@ Partial Class Po_Go
         '
         'btnC1
         '
+        Me.btnC1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC1.Location = New System.Drawing.Point(174, 12)
         Me.btnC1.Name = "btnC1"
         Me.btnC1.Size = New System.Drawing.Size(75, 75)
@@ -125,6 +128,7 @@ Partial Class Po_Go
         '
         'btnD1
         '
+        Me.btnD1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD1.Location = New System.Drawing.Point(255, 12)
         Me.btnD1.Name = "btnD1"
         Me.btnD1.Size = New System.Drawing.Size(75, 75)
@@ -133,6 +137,7 @@ Partial Class Po_Go
         '
         'btnE1
         '
+        Me.btnE1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE1.Location = New System.Drawing.Point(336, 12)
         Me.btnE1.Name = "btnE1"
         Me.btnE1.Size = New System.Drawing.Size(75, 75)
@@ -141,6 +146,7 @@ Partial Class Po_Go
         '
         'btnF1
         '
+        Me.btnF1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF1.Location = New System.Drawing.Point(417, 12)
         Me.btnF1.Name = "btnF1"
         Me.btnF1.Size = New System.Drawing.Size(75, 75)
@@ -149,6 +155,7 @@ Partial Class Po_Go
         '
         'btnG1
         '
+        Me.btnG1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG1.Location = New System.Drawing.Point(498, 12)
         Me.btnG1.Name = "btnG1"
         Me.btnG1.Size = New System.Drawing.Size(75, 75)
@@ -157,6 +164,7 @@ Partial Class Po_Go
         '
         'btnH1
         '
+        Me.btnH1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH1.Location = New System.Drawing.Point(579, 12)
         Me.btnH1.Name = "btnH1"
         Me.btnH1.Size = New System.Drawing.Size(75, 75)
@@ -165,6 +173,7 @@ Partial Class Po_Go
         '
         'btnH2
         '
+        Me.btnH2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH2.Location = New System.Drawing.Point(579, 93)
         Me.btnH2.Name = "btnH2"
         Me.btnH2.Size = New System.Drawing.Size(75, 75)
@@ -173,6 +182,7 @@ Partial Class Po_Go
         '
         'btnG2
         '
+        Me.btnG2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG2.Location = New System.Drawing.Point(498, 93)
         Me.btnG2.Name = "btnG2"
         Me.btnG2.Size = New System.Drawing.Size(75, 75)
@@ -181,6 +191,7 @@ Partial Class Po_Go
         '
         'btnF2
         '
+        Me.btnF2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF2.Location = New System.Drawing.Point(417, 93)
         Me.btnF2.Name = "btnF2"
         Me.btnF2.Size = New System.Drawing.Size(75, 75)
@@ -189,6 +200,7 @@ Partial Class Po_Go
         '
         'btnE2
         '
+        Me.btnE2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE2.Location = New System.Drawing.Point(336, 93)
         Me.btnE2.Name = "btnE2"
         Me.btnE2.Size = New System.Drawing.Size(75, 75)
@@ -197,6 +209,7 @@ Partial Class Po_Go
         '
         'btnD2
         '
+        Me.btnD2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD2.Location = New System.Drawing.Point(255, 93)
         Me.btnD2.Name = "btnD2"
         Me.btnD2.Size = New System.Drawing.Size(75, 75)
@@ -205,6 +218,7 @@ Partial Class Po_Go
         '
         'btnC2
         '
+        Me.btnC2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC2.Location = New System.Drawing.Point(174, 93)
         Me.btnC2.Name = "btnC2"
         Me.btnC2.Size = New System.Drawing.Size(75, 75)
@@ -213,6 +227,7 @@ Partial Class Po_Go
         '
         'btnB2
         '
+        Me.btnB2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB2.Location = New System.Drawing.Point(93, 93)
         Me.btnB2.Name = "btnB2"
         Me.btnB2.Size = New System.Drawing.Size(75, 75)
@@ -221,6 +236,7 @@ Partial Class Po_Go
         '
         'btnA2
         '
+        Me.btnA2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA2.Location = New System.Drawing.Point(12, 93)
         Me.btnA2.Name = "btnA2"
         Me.btnA2.Size = New System.Drawing.Size(75, 75)
@@ -229,6 +245,7 @@ Partial Class Po_Go
         '
         'btnH3
         '
+        Me.btnH3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH3.Location = New System.Drawing.Point(579, 174)
         Me.btnH3.Name = "btnH3"
         Me.btnH3.Size = New System.Drawing.Size(75, 75)
@@ -237,6 +254,7 @@ Partial Class Po_Go
         '
         'btnG3
         '
+        Me.btnG3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG3.Location = New System.Drawing.Point(498, 174)
         Me.btnG3.Name = "btnG3"
         Me.btnG3.Size = New System.Drawing.Size(75, 75)
@@ -245,6 +263,7 @@ Partial Class Po_Go
         '
         'btnF3
         '
+        Me.btnF3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF3.Location = New System.Drawing.Point(417, 174)
         Me.btnF3.Name = "btnF3"
         Me.btnF3.Size = New System.Drawing.Size(75, 75)
@@ -253,6 +272,7 @@ Partial Class Po_Go
         '
         'btnE3
         '
+        Me.btnE3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE3.Location = New System.Drawing.Point(336, 174)
         Me.btnE3.Name = "btnE3"
         Me.btnE3.Size = New System.Drawing.Size(75, 75)
@@ -261,6 +281,7 @@ Partial Class Po_Go
         '
         'btnD3
         '
+        Me.btnD3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD3.Location = New System.Drawing.Point(255, 174)
         Me.btnD3.Name = "btnD3"
         Me.btnD3.Size = New System.Drawing.Size(75, 75)
@@ -269,6 +290,7 @@ Partial Class Po_Go
         '
         'btnC3
         '
+        Me.btnC3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC3.Location = New System.Drawing.Point(174, 174)
         Me.btnC3.Name = "btnC3"
         Me.btnC3.Size = New System.Drawing.Size(75, 75)
@@ -277,6 +299,7 @@ Partial Class Po_Go
         '
         'btnB3
         '
+        Me.btnB3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB3.Location = New System.Drawing.Point(93, 174)
         Me.btnB3.Name = "btnB3"
         Me.btnB3.Size = New System.Drawing.Size(75, 75)
@@ -285,6 +308,7 @@ Partial Class Po_Go
         '
         'btnA3
         '
+        Me.btnA3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA3.Location = New System.Drawing.Point(12, 174)
         Me.btnA3.Name = "btnA3"
         Me.btnA3.Size = New System.Drawing.Size(75, 75)
@@ -293,6 +317,7 @@ Partial Class Po_Go
         '
         'btnH4
         '
+        Me.btnH4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH4.Location = New System.Drawing.Point(579, 255)
         Me.btnH4.Name = "btnH4"
         Me.btnH4.Size = New System.Drawing.Size(75, 75)
@@ -301,6 +326,7 @@ Partial Class Po_Go
         '
         'btnG4
         '
+        Me.btnG4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG4.Location = New System.Drawing.Point(498, 255)
         Me.btnG4.Name = "btnG4"
         Me.btnG4.Size = New System.Drawing.Size(75, 75)
@@ -309,6 +335,7 @@ Partial Class Po_Go
         '
         'btnF4
         '
+        Me.btnF4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF4.Location = New System.Drawing.Point(417, 255)
         Me.btnF4.Name = "btnF4"
         Me.btnF4.Size = New System.Drawing.Size(75, 75)
@@ -317,6 +344,7 @@ Partial Class Po_Go
         '
         'btnE4
         '
+        Me.btnE4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE4.Location = New System.Drawing.Point(336, 255)
         Me.btnE4.Name = "btnE4"
         Me.btnE4.Size = New System.Drawing.Size(75, 75)
@@ -325,6 +353,7 @@ Partial Class Po_Go
         '
         'btnD4
         '
+        Me.btnD4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD4.Location = New System.Drawing.Point(255, 255)
         Me.btnD4.Name = "btnD4"
         Me.btnD4.Size = New System.Drawing.Size(75, 75)
@@ -333,6 +362,7 @@ Partial Class Po_Go
         '
         'btnC4
         '
+        Me.btnC4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC4.Location = New System.Drawing.Point(174, 255)
         Me.btnC4.Name = "btnC4"
         Me.btnC4.Size = New System.Drawing.Size(75, 75)
@@ -341,6 +371,7 @@ Partial Class Po_Go
         '
         'btnB4
         '
+        Me.btnB4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB4.Location = New System.Drawing.Point(93, 255)
         Me.btnB4.Name = "btnB4"
         Me.btnB4.Size = New System.Drawing.Size(75, 75)
@@ -349,6 +380,7 @@ Partial Class Po_Go
         '
         'btnA4
         '
+        Me.btnA4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA4.Location = New System.Drawing.Point(12, 255)
         Me.btnA4.Name = "btnA4"
         Me.btnA4.Size = New System.Drawing.Size(75, 75)
@@ -357,6 +389,7 @@ Partial Class Po_Go
         '
         'btnH5
         '
+        Me.btnH5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH5.Location = New System.Drawing.Point(579, 336)
         Me.btnH5.Name = "btnH5"
         Me.btnH5.Size = New System.Drawing.Size(75, 75)
@@ -365,6 +398,7 @@ Partial Class Po_Go
         '
         'btnG5
         '
+        Me.btnG5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG5.Location = New System.Drawing.Point(498, 336)
         Me.btnG5.Name = "btnG5"
         Me.btnG5.Size = New System.Drawing.Size(75, 75)
@@ -373,6 +407,7 @@ Partial Class Po_Go
         '
         'btnF5
         '
+        Me.btnF5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF5.Location = New System.Drawing.Point(417, 336)
         Me.btnF5.Name = "btnF5"
         Me.btnF5.Size = New System.Drawing.Size(75, 75)
@@ -381,6 +416,7 @@ Partial Class Po_Go
         '
         'btnE5
         '
+        Me.btnE5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE5.Location = New System.Drawing.Point(336, 336)
         Me.btnE5.Name = "btnE5"
         Me.btnE5.Size = New System.Drawing.Size(75, 75)
@@ -389,6 +425,7 @@ Partial Class Po_Go
         '
         'btnD5
         '
+        Me.btnD5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD5.Location = New System.Drawing.Point(255, 336)
         Me.btnD5.Name = "btnD5"
         Me.btnD5.Size = New System.Drawing.Size(75, 75)
@@ -397,6 +434,7 @@ Partial Class Po_Go
         '
         'btnC5
         '
+        Me.btnC5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC5.Location = New System.Drawing.Point(174, 336)
         Me.btnC5.Name = "btnC5"
         Me.btnC5.Size = New System.Drawing.Size(75, 75)
@@ -405,6 +443,7 @@ Partial Class Po_Go
         '
         'btnB5
         '
+        Me.btnB5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB5.Location = New System.Drawing.Point(93, 336)
         Me.btnB5.Name = "btnB5"
         Me.btnB5.Size = New System.Drawing.Size(75, 75)
@@ -413,6 +452,7 @@ Partial Class Po_Go
         '
         'btnA5
         '
+        Me.btnA5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA5.Location = New System.Drawing.Point(12, 336)
         Me.btnA5.Name = "btnA5"
         Me.btnA5.Size = New System.Drawing.Size(75, 75)
@@ -421,6 +461,7 @@ Partial Class Po_Go
         '
         'btnH6
         '
+        Me.btnH6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH6.Location = New System.Drawing.Point(579, 417)
         Me.btnH6.Name = "btnH6"
         Me.btnH6.Size = New System.Drawing.Size(75, 75)
@@ -429,6 +470,7 @@ Partial Class Po_Go
         '
         'btnG6
         '
+        Me.btnG6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG6.Location = New System.Drawing.Point(498, 417)
         Me.btnG6.Name = "btnG6"
         Me.btnG6.Size = New System.Drawing.Size(75, 75)
@@ -437,6 +479,7 @@ Partial Class Po_Go
         '
         'btnF6
         '
+        Me.btnF6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF6.Location = New System.Drawing.Point(417, 417)
         Me.btnF6.Name = "btnF6"
         Me.btnF6.Size = New System.Drawing.Size(75, 75)
@@ -445,6 +488,7 @@ Partial Class Po_Go
         '
         'btnE6
         '
+        Me.btnE6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE6.Location = New System.Drawing.Point(336, 417)
         Me.btnE6.Name = "btnE6"
         Me.btnE6.Size = New System.Drawing.Size(75, 75)
@@ -453,6 +497,7 @@ Partial Class Po_Go
         '
         'btnD6
         '
+        Me.btnD6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD6.Location = New System.Drawing.Point(255, 417)
         Me.btnD6.Name = "btnD6"
         Me.btnD6.Size = New System.Drawing.Size(75, 75)
@@ -461,6 +506,7 @@ Partial Class Po_Go
         '
         'btnC6
         '
+        Me.btnC6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC6.Location = New System.Drawing.Point(174, 417)
         Me.btnC6.Name = "btnC6"
         Me.btnC6.Size = New System.Drawing.Size(75, 75)
@@ -469,6 +515,7 @@ Partial Class Po_Go
         '
         'btnB6
         '
+        Me.btnB6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB6.Location = New System.Drawing.Point(93, 417)
         Me.btnB6.Name = "btnB6"
         Me.btnB6.Size = New System.Drawing.Size(75, 75)
@@ -477,6 +524,7 @@ Partial Class Po_Go
         '
         'btnA6
         '
+        Me.btnA6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA6.Location = New System.Drawing.Point(12, 417)
         Me.btnA6.Name = "btnA6"
         Me.btnA6.Size = New System.Drawing.Size(75, 75)
@@ -485,6 +533,7 @@ Partial Class Po_Go
         '
         'btnH7
         '
+        Me.btnH7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH7.Location = New System.Drawing.Point(579, 498)
         Me.btnH7.Name = "btnH7"
         Me.btnH7.Size = New System.Drawing.Size(75, 75)
@@ -493,6 +542,7 @@ Partial Class Po_Go
         '
         'btnG7
         '
+        Me.btnG7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG7.Location = New System.Drawing.Point(498, 498)
         Me.btnG7.Name = "btnG7"
         Me.btnG7.Size = New System.Drawing.Size(75, 75)
@@ -501,6 +551,7 @@ Partial Class Po_Go
         '
         'btnF7
         '
+        Me.btnF7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF7.Location = New System.Drawing.Point(417, 498)
         Me.btnF7.Name = "btnF7"
         Me.btnF7.Size = New System.Drawing.Size(75, 75)
@@ -509,6 +560,7 @@ Partial Class Po_Go
         '
         'btnE7
         '
+        Me.btnE7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE7.Location = New System.Drawing.Point(336, 498)
         Me.btnE7.Name = "btnE7"
         Me.btnE7.Size = New System.Drawing.Size(75, 75)
@@ -517,6 +569,7 @@ Partial Class Po_Go
         '
         'btnD7
         '
+        Me.btnD7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD7.Location = New System.Drawing.Point(255, 498)
         Me.btnD7.Name = "btnD7"
         Me.btnD7.Size = New System.Drawing.Size(75, 75)
@@ -525,6 +578,7 @@ Partial Class Po_Go
         '
         'btnC7
         '
+        Me.btnC7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC7.Location = New System.Drawing.Point(174, 498)
         Me.btnC7.Name = "btnC7"
         Me.btnC7.Size = New System.Drawing.Size(75, 75)
@@ -533,6 +587,7 @@ Partial Class Po_Go
         '
         'btnB7
         '
+        Me.btnB7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB7.Location = New System.Drawing.Point(93, 498)
         Me.btnB7.Name = "btnB7"
         Me.btnB7.Size = New System.Drawing.Size(75, 75)
@@ -541,6 +596,7 @@ Partial Class Po_Go
         '
         'btnA7
         '
+        Me.btnA7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA7.Location = New System.Drawing.Point(12, 498)
         Me.btnA7.Name = "btnA7"
         Me.btnA7.Size = New System.Drawing.Size(75, 75)
@@ -549,6 +605,7 @@ Partial Class Po_Go
         '
         'btnH8
         '
+        Me.btnH8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnH8.Location = New System.Drawing.Point(579, 579)
         Me.btnH8.Name = "btnH8"
         Me.btnH8.Size = New System.Drawing.Size(75, 75)
@@ -557,6 +614,7 @@ Partial Class Po_Go
         '
         'btnG8
         '
+        Me.btnG8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnG8.Location = New System.Drawing.Point(498, 579)
         Me.btnG8.Name = "btnG8"
         Me.btnG8.Size = New System.Drawing.Size(75, 75)
@@ -565,6 +623,7 @@ Partial Class Po_Go
         '
         'btnF8
         '
+        Me.btnF8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnF8.Location = New System.Drawing.Point(417, 579)
         Me.btnF8.Name = "btnF8"
         Me.btnF8.Size = New System.Drawing.Size(75, 75)
@@ -573,6 +632,7 @@ Partial Class Po_Go
         '
         'btnE8
         '
+        Me.btnE8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnE8.Location = New System.Drawing.Point(336, 579)
         Me.btnE8.Name = "btnE8"
         Me.btnE8.Size = New System.Drawing.Size(75, 75)
@@ -581,6 +641,7 @@ Partial Class Po_Go
         '
         'btnD8
         '
+        Me.btnD8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnD8.Location = New System.Drawing.Point(255, 579)
         Me.btnD8.Name = "btnD8"
         Me.btnD8.Size = New System.Drawing.Size(75, 75)
@@ -589,6 +650,7 @@ Partial Class Po_Go
         '
         'btnC8
         '
+        Me.btnC8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnC8.Location = New System.Drawing.Point(174, 579)
         Me.btnC8.Name = "btnC8"
         Me.btnC8.Size = New System.Drawing.Size(75, 75)
@@ -597,6 +659,7 @@ Partial Class Po_Go
         '
         'btnB8
         '
+        Me.btnB8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnB8.Location = New System.Drawing.Point(93, 579)
         Me.btnB8.Name = "btnB8"
         Me.btnB8.Size = New System.Drawing.Size(75, 75)
@@ -605,6 +668,7 @@ Partial Class Po_Go
         '
         'btnA8
         '
+        Me.btnA8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnA8.Location = New System.Drawing.Point(12, 579)
         Me.btnA8.Name = "btnA8"
         Me.btnA8.Size = New System.Drawing.Size(75, 75)
@@ -613,7 +677,7 @@ Partial Class Po_Go
         '
         'btnRestart
         '
-        Me.btnRestart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.btnRestart.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnRestart.Location = New System.Drawing.Point(12, 719)
         Me.btnRestart.Name = "btnRestart"
         Me.btnRestart.Size = New System.Drawing.Size(75, 23)
@@ -623,8 +687,7 @@ Partial Class Po_Go
         '
         'txtStatus
         '
-        Me.txtStatus.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
-                        Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.txtStatus.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtStatus.Location = New System.Drawing.Point(93, 721)
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.ReadOnly = true
@@ -633,7 +696,7 @@ Partial Class Po_Go
         '
         'pbxRedIcon
         '
-        Me.pbxRedIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.pbxRedIcon.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pbxRedIcon.Image = Global.Po_Go.Resources.dragon_red
         Me.pbxRedIcon.Location = New System.Drawing.Point(12, 663)
         Me.pbxRedIcon.Name = "pbxRedIcon"
@@ -644,7 +707,7 @@ Partial Class Po_Go
         '
         'pbxBlackIcon
         '
-        Me.pbxBlackIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.pbxBlackIcon.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pbxBlackIcon.Image = Global.Po_Go.Resources.dragon_black
         Me.pbxBlackIcon.Location = New System.Drawing.Point(604, 663)
         Me.pbxBlackIcon.Name = "pbxBlackIcon"
@@ -655,7 +718,7 @@ Partial Class Po_Go
         '
         'lblRedScore
         '
-        Me.lblRedScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.lblRedScore.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblRedScore.AutoSize = true
         Me.lblRedScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 14!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.lblRedScore.Location = New System.Drawing.Point(68, 677)
@@ -666,7 +729,7 @@ Partial Class Po_Go
         '
         'lblBlackScore
         '
-        Me.lblBlackScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.lblBlackScore.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblBlackScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 14!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.lblBlackScore.Location = New System.Drawing.Point(437, 677)
         Me.lblBlackScore.Name = "lblBlackScore"
