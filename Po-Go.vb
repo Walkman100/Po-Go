@@ -99,10 +99,10 @@ Public Partial Class Po_Go
             Next
         Next
         
-        SetRed(btnD4)
-        SetBlack(btnE4)
-        SetBlack(btnD5)
-        SetRed(btnE5)
+        SetBlack(btnD4)
+        SetRed(btnE4)
+        SetRed(btnD5)
+        SetBlack(btnE5)
         
         scoreCalculate()
         
