@@ -1,3 +1,8 @@
+Option Explicit On
+Option Strict On
+Option Compare Binary
+Option Infer On
+
 Public Partial Class Po_Go
     Public Sub New()
         Me.InitializeComponent()
@@ -12,6 +17,8 @@ Public Partial Class Po_Go
     End Enum
     
     Dim currentTurn As Player = Player.Red
+    
+    ' ==================== UI Handling subs ====================
     
     Sub gridButtons_Click(sender As Object, e As EventArgs) Handles _
       btnA1.Click, btnA2.Click, btnA3.Click, btnA4.Click, btnA5.Click, btnA6.Click, btnA7.Click, btnA8.Click, _
@@ -52,6 +59,8 @@ Public Partial Class Po_Go
         
         SetTurn(Player.Red)
     End Sub
+    
+    ' ==================== Helper Subs ====================
     
     Sub scoreCalculate()
         Dim redScore As Integer = 0
@@ -106,6 +115,8 @@ Public Partial Class Po_Go
         End If
         
     End Sub
+    
+    ' ==================== GetButton function ====================
     
     Function GetButton(gridCode As String) As Button
         Select Case gridCode

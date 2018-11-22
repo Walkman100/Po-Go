@@ -168,7 +168,7 @@ Partial Class Po_Go
         Me.btnH2.Location = New System.Drawing.Point(579, 93)
         Me.btnH2.Name = "btnH2"
         Me.btnH2.Size = New System.Drawing.Size(75, 75)
-        Me.btnH2.TabIndex = 16
+        Me.btnH2.TabIndex = 15
         Me.btnH2.UseVisualStyleBackColor = true
         '
         'btnG2
@@ -176,7 +176,7 @@ Partial Class Po_Go
         Me.btnG2.Location = New System.Drawing.Point(498, 93)
         Me.btnG2.Name = "btnG2"
         Me.btnG2.Size = New System.Drawing.Size(75, 75)
-        Me.btnG2.TabIndex = 15
+        Me.btnG2.TabIndex = 14
         Me.btnG2.UseVisualStyleBackColor = true
         '
         'btnF2
@@ -184,7 +184,7 @@ Partial Class Po_Go
         Me.btnF2.Location = New System.Drawing.Point(417, 93)
         Me.btnF2.Name = "btnF2"
         Me.btnF2.Size = New System.Drawing.Size(75, 75)
-        Me.btnF2.TabIndex = 14
+        Me.btnF2.TabIndex = 13
         Me.btnF2.UseVisualStyleBackColor = true
         '
         'btnE2
@@ -192,7 +192,7 @@ Partial Class Po_Go
         Me.btnE2.Location = New System.Drawing.Point(336, 93)
         Me.btnE2.Name = "btnE2"
         Me.btnE2.Size = New System.Drawing.Size(75, 75)
-        Me.btnE2.TabIndex = 13
+        Me.btnE2.TabIndex = 12
         Me.btnE2.UseVisualStyleBackColor = true
         '
         'btnD2
@@ -200,7 +200,7 @@ Partial Class Po_Go
         Me.btnD2.Location = New System.Drawing.Point(255, 93)
         Me.btnD2.Name = "btnD2"
         Me.btnD2.Size = New System.Drawing.Size(75, 75)
-        Me.btnD2.TabIndex = 12
+        Me.btnD2.TabIndex = 11
         Me.btnD2.UseVisualStyleBackColor = true
         '
         'btnC2
@@ -208,7 +208,7 @@ Partial Class Po_Go
         Me.btnC2.Location = New System.Drawing.Point(174, 93)
         Me.btnC2.Name = "btnC2"
         Me.btnC2.Size = New System.Drawing.Size(75, 75)
-        Me.btnC2.TabIndex = 11
+        Me.btnC2.TabIndex = 10
         Me.btnC2.UseVisualStyleBackColor = true
         '
         'btnB2
@@ -216,7 +216,7 @@ Partial Class Po_Go
         Me.btnB2.Location = New System.Drawing.Point(93, 93)
         Me.btnB2.Name = "btnB2"
         Me.btnB2.Size = New System.Drawing.Size(75, 75)
-        Me.btnB2.TabIndex = 10
+        Me.btnB2.TabIndex = 9
         Me.btnB2.UseVisualStyleBackColor = true
         '
         'btnA2
@@ -224,7 +224,7 @@ Partial Class Po_Go
         Me.btnA2.Location = New System.Drawing.Point(12, 93)
         Me.btnA2.Name = "btnA2"
         Me.btnA2.Size = New System.Drawing.Size(75, 75)
-        Me.btnA2.TabIndex = 9
+        Me.btnA2.TabIndex = 8
         Me.btnA2.UseVisualStyleBackColor = true
         '
         'btnH3
@@ -232,7 +232,7 @@ Partial Class Po_Go
         Me.btnH3.Location = New System.Drawing.Point(579, 174)
         Me.btnH3.Name = "btnH3"
         Me.btnH3.Size = New System.Drawing.Size(75, 75)
-        Me.btnH3.TabIndex = 25
+        Me.btnH3.TabIndex = 23
         Me.btnH3.UseVisualStyleBackColor = true
         '
         'btnG3
@@ -240,7 +240,7 @@ Partial Class Po_Go
         Me.btnG3.Location = New System.Drawing.Point(498, 174)
         Me.btnG3.Name = "btnG3"
         Me.btnG3.Size = New System.Drawing.Size(75, 75)
-        Me.btnG3.TabIndex = 24
+        Me.btnG3.TabIndex = 22
         Me.btnG3.UseVisualStyleBackColor = true
         '
         'btnF3
@@ -248,7 +248,7 @@ Partial Class Po_Go
         Me.btnF3.Location = New System.Drawing.Point(417, 174)
         Me.btnF3.Name = "btnF3"
         Me.btnF3.Size = New System.Drawing.Size(75, 75)
-        Me.btnF3.TabIndex = 23
+        Me.btnF3.TabIndex = 21
         Me.btnF3.UseVisualStyleBackColor = true
         '
         'btnE3
@@ -256,7 +256,7 @@ Partial Class Po_Go
         Me.btnE3.Location = New System.Drawing.Point(336, 174)
         Me.btnE3.Name = "btnE3"
         Me.btnE3.Size = New System.Drawing.Size(75, 75)
-        Me.btnE3.TabIndex = 22
+        Me.btnE3.TabIndex = 20
         Me.btnE3.UseVisualStyleBackColor = true
         '
         'btnD3
@@ -264,7 +264,7 @@ Partial Class Po_Go
         Me.btnD3.Location = New System.Drawing.Point(255, 174)
         Me.btnD3.Name = "btnD3"
         Me.btnD3.Size = New System.Drawing.Size(75, 75)
-        Me.btnD3.TabIndex = 21
+        Me.btnD3.TabIndex = 19
         Me.btnD3.UseVisualStyleBackColor = true
         '
         'btnC3
@@ -272,7 +272,7 @@ Partial Class Po_Go
         Me.btnC3.Location = New System.Drawing.Point(174, 174)
         Me.btnC3.Name = "btnC3"
         Me.btnC3.Size = New System.Drawing.Size(75, 75)
-        Me.btnC3.TabIndex = 20
+        Me.btnC3.TabIndex = 18
         Me.btnC3.UseVisualStyleBackColor = true
         '
         'btnB3
@@ -280,7 +280,7 @@ Partial Class Po_Go
         Me.btnB3.Location = New System.Drawing.Point(93, 174)
         Me.btnB3.Name = "btnB3"
         Me.btnB3.Size = New System.Drawing.Size(75, 75)
-        Me.btnB3.TabIndex = 19
+        Me.btnB3.TabIndex = 17
         Me.btnB3.UseVisualStyleBackColor = true
         '
         'btnA3
@@ -288,7 +288,7 @@ Partial Class Po_Go
         Me.btnA3.Location = New System.Drawing.Point(12, 174)
         Me.btnA3.Name = "btnA3"
         Me.btnA3.Size = New System.Drawing.Size(75, 75)
-        Me.btnA3.TabIndex = 18
+        Me.btnA3.TabIndex = 16
         Me.btnA3.UseVisualStyleBackColor = true
         '
         'btnH4
@@ -296,7 +296,7 @@ Partial Class Po_Go
         Me.btnH4.Location = New System.Drawing.Point(579, 255)
         Me.btnH4.Name = "btnH4"
         Me.btnH4.Size = New System.Drawing.Size(75, 75)
-        Me.btnH4.TabIndex = 34
+        Me.btnH4.TabIndex = 31
         Me.btnH4.UseVisualStyleBackColor = true
         '
         'btnG4
@@ -304,7 +304,7 @@ Partial Class Po_Go
         Me.btnG4.Location = New System.Drawing.Point(498, 255)
         Me.btnG4.Name = "btnG4"
         Me.btnG4.Size = New System.Drawing.Size(75, 75)
-        Me.btnG4.TabIndex = 33
+        Me.btnG4.TabIndex = 30
         Me.btnG4.UseVisualStyleBackColor = true
         '
         'btnF4
@@ -312,7 +312,7 @@ Partial Class Po_Go
         Me.btnF4.Location = New System.Drawing.Point(417, 255)
         Me.btnF4.Name = "btnF4"
         Me.btnF4.Size = New System.Drawing.Size(75, 75)
-        Me.btnF4.TabIndex = 32
+        Me.btnF4.TabIndex = 29
         Me.btnF4.UseVisualStyleBackColor = true
         '
         'btnE4
@@ -320,7 +320,7 @@ Partial Class Po_Go
         Me.btnE4.Location = New System.Drawing.Point(336, 255)
         Me.btnE4.Name = "btnE4"
         Me.btnE4.Size = New System.Drawing.Size(75, 75)
-        Me.btnE4.TabIndex = 31
+        Me.btnE4.TabIndex = 28
         Me.btnE4.UseVisualStyleBackColor = true
         '
         'btnD4
@@ -328,7 +328,7 @@ Partial Class Po_Go
         Me.btnD4.Location = New System.Drawing.Point(255, 255)
         Me.btnD4.Name = "btnD4"
         Me.btnD4.Size = New System.Drawing.Size(75, 75)
-        Me.btnD4.TabIndex = 30
+        Me.btnD4.TabIndex = 27
         Me.btnD4.UseVisualStyleBackColor = true
         '
         'btnC4
@@ -336,7 +336,7 @@ Partial Class Po_Go
         Me.btnC4.Location = New System.Drawing.Point(174, 255)
         Me.btnC4.Name = "btnC4"
         Me.btnC4.Size = New System.Drawing.Size(75, 75)
-        Me.btnC4.TabIndex = 29
+        Me.btnC4.TabIndex = 26
         Me.btnC4.UseVisualStyleBackColor = true
         '
         'btnB4
@@ -344,7 +344,7 @@ Partial Class Po_Go
         Me.btnB4.Location = New System.Drawing.Point(93, 255)
         Me.btnB4.Name = "btnB4"
         Me.btnB4.Size = New System.Drawing.Size(75, 75)
-        Me.btnB4.TabIndex = 28
+        Me.btnB4.TabIndex = 25
         Me.btnB4.UseVisualStyleBackColor = true
         '
         'btnA4
@@ -352,7 +352,7 @@ Partial Class Po_Go
         Me.btnA4.Location = New System.Drawing.Point(12, 255)
         Me.btnA4.Name = "btnA4"
         Me.btnA4.Size = New System.Drawing.Size(75, 75)
-        Me.btnA4.TabIndex = 27
+        Me.btnA4.TabIndex = 24
         Me.btnA4.UseVisualStyleBackColor = true
         '
         'btnH5
@@ -360,7 +360,7 @@ Partial Class Po_Go
         Me.btnH5.Location = New System.Drawing.Point(579, 336)
         Me.btnH5.Name = "btnH5"
         Me.btnH5.Size = New System.Drawing.Size(75, 75)
-        Me.btnH5.TabIndex = 43
+        Me.btnH5.TabIndex = 39
         Me.btnH5.UseVisualStyleBackColor = true
         '
         'btnG5
@@ -368,7 +368,7 @@ Partial Class Po_Go
         Me.btnG5.Location = New System.Drawing.Point(498, 336)
         Me.btnG5.Name = "btnG5"
         Me.btnG5.Size = New System.Drawing.Size(75, 75)
-        Me.btnG5.TabIndex = 42
+        Me.btnG5.TabIndex = 38
         Me.btnG5.UseVisualStyleBackColor = true
         '
         'btnF5
@@ -376,7 +376,7 @@ Partial Class Po_Go
         Me.btnF5.Location = New System.Drawing.Point(417, 336)
         Me.btnF5.Name = "btnF5"
         Me.btnF5.Size = New System.Drawing.Size(75, 75)
-        Me.btnF5.TabIndex = 41
+        Me.btnF5.TabIndex = 37
         Me.btnF5.UseVisualStyleBackColor = true
         '
         'btnE5
@@ -384,7 +384,7 @@ Partial Class Po_Go
         Me.btnE5.Location = New System.Drawing.Point(336, 336)
         Me.btnE5.Name = "btnE5"
         Me.btnE5.Size = New System.Drawing.Size(75, 75)
-        Me.btnE5.TabIndex = 40
+        Me.btnE5.TabIndex = 36
         Me.btnE5.UseVisualStyleBackColor = true
         '
         'btnD5
@@ -392,7 +392,7 @@ Partial Class Po_Go
         Me.btnD5.Location = New System.Drawing.Point(255, 336)
         Me.btnD5.Name = "btnD5"
         Me.btnD5.Size = New System.Drawing.Size(75, 75)
-        Me.btnD5.TabIndex = 39
+        Me.btnD5.TabIndex = 35
         Me.btnD5.UseVisualStyleBackColor = true
         '
         'btnC5
@@ -400,7 +400,7 @@ Partial Class Po_Go
         Me.btnC5.Location = New System.Drawing.Point(174, 336)
         Me.btnC5.Name = "btnC5"
         Me.btnC5.Size = New System.Drawing.Size(75, 75)
-        Me.btnC5.TabIndex = 38
+        Me.btnC5.TabIndex = 34
         Me.btnC5.UseVisualStyleBackColor = true
         '
         'btnB5
@@ -408,7 +408,7 @@ Partial Class Po_Go
         Me.btnB5.Location = New System.Drawing.Point(93, 336)
         Me.btnB5.Name = "btnB5"
         Me.btnB5.Size = New System.Drawing.Size(75, 75)
-        Me.btnB5.TabIndex = 37
+        Me.btnB5.TabIndex = 33
         Me.btnB5.UseVisualStyleBackColor = true
         '
         'btnA5
@@ -416,7 +416,7 @@ Partial Class Po_Go
         Me.btnA5.Location = New System.Drawing.Point(12, 336)
         Me.btnA5.Name = "btnA5"
         Me.btnA5.Size = New System.Drawing.Size(75, 75)
-        Me.btnA5.TabIndex = 36
+        Me.btnA5.TabIndex = 32
         Me.btnA5.UseVisualStyleBackColor = true
         '
         'btnH6
@@ -424,7 +424,7 @@ Partial Class Po_Go
         Me.btnH6.Location = New System.Drawing.Point(579, 417)
         Me.btnH6.Name = "btnH6"
         Me.btnH6.Size = New System.Drawing.Size(75, 75)
-        Me.btnH6.TabIndex = 52
+        Me.btnH6.TabIndex = 47
         Me.btnH6.UseVisualStyleBackColor = true
         '
         'btnG6
@@ -432,7 +432,7 @@ Partial Class Po_Go
         Me.btnG6.Location = New System.Drawing.Point(498, 417)
         Me.btnG6.Name = "btnG6"
         Me.btnG6.Size = New System.Drawing.Size(75, 75)
-        Me.btnG6.TabIndex = 51
+        Me.btnG6.TabIndex = 46
         Me.btnG6.UseVisualStyleBackColor = true
         '
         'btnF6
@@ -440,7 +440,7 @@ Partial Class Po_Go
         Me.btnF6.Location = New System.Drawing.Point(417, 417)
         Me.btnF6.Name = "btnF6"
         Me.btnF6.Size = New System.Drawing.Size(75, 75)
-        Me.btnF6.TabIndex = 50
+        Me.btnF6.TabIndex = 45
         Me.btnF6.UseVisualStyleBackColor = true
         '
         'btnE6
@@ -448,7 +448,7 @@ Partial Class Po_Go
         Me.btnE6.Location = New System.Drawing.Point(336, 417)
         Me.btnE6.Name = "btnE6"
         Me.btnE6.Size = New System.Drawing.Size(75, 75)
-        Me.btnE6.TabIndex = 49
+        Me.btnE6.TabIndex = 44
         Me.btnE6.UseVisualStyleBackColor = true
         '
         'btnD6
@@ -456,7 +456,7 @@ Partial Class Po_Go
         Me.btnD6.Location = New System.Drawing.Point(255, 417)
         Me.btnD6.Name = "btnD6"
         Me.btnD6.Size = New System.Drawing.Size(75, 75)
-        Me.btnD6.TabIndex = 48
+        Me.btnD6.TabIndex = 43
         Me.btnD6.UseVisualStyleBackColor = true
         '
         'btnC6
@@ -464,7 +464,7 @@ Partial Class Po_Go
         Me.btnC6.Location = New System.Drawing.Point(174, 417)
         Me.btnC6.Name = "btnC6"
         Me.btnC6.Size = New System.Drawing.Size(75, 75)
-        Me.btnC6.TabIndex = 47
+        Me.btnC6.TabIndex = 42
         Me.btnC6.UseVisualStyleBackColor = true
         '
         'btnB6
@@ -472,7 +472,7 @@ Partial Class Po_Go
         Me.btnB6.Location = New System.Drawing.Point(93, 417)
         Me.btnB6.Name = "btnB6"
         Me.btnB6.Size = New System.Drawing.Size(75, 75)
-        Me.btnB6.TabIndex = 46
+        Me.btnB6.TabIndex = 41
         Me.btnB6.UseVisualStyleBackColor = true
         '
         'btnA6
@@ -480,7 +480,7 @@ Partial Class Po_Go
         Me.btnA6.Location = New System.Drawing.Point(12, 417)
         Me.btnA6.Name = "btnA6"
         Me.btnA6.Size = New System.Drawing.Size(75, 75)
-        Me.btnA6.TabIndex = 45
+        Me.btnA6.TabIndex = 40
         Me.btnA6.UseVisualStyleBackColor = true
         '
         'btnH7
@@ -488,7 +488,7 @@ Partial Class Po_Go
         Me.btnH7.Location = New System.Drawing.Point(579, 498)
         Me.btnH7.Name = "btnH7"
         Me.btnH7.Size = New System.Drawing.Size(75, 75)
-        Me.btnH7.TabIndex = 61
+        Me.btnH7.TabIndex = 55
         Me.btnH7.UseVisualStyleBackColor = true
         '
         'btnG7
@@ -496,7 +496,7 @@ Partial Class Po_Go
         Me.btnG7.Location = New System.Drawing.Point(498, 498)
         Me.btnG7.Name = "btnG7"
         Me.btnG7.Size = New System.Drawing.Size(75, 75)
-        Me.btnG7.TabIndex = 60
+        Me.btnG7.TabIndex = 54
         Me.btnG7.UseVisualStyleBackColor = true
         '
         'btnF7
@@ -504,7 +504,7 @@ Partial Class Po_Go
         Me.btnF7.Location = New System.Drawing.Point(417, 498)
         Me.btnF7.Name = "btnF7"
         Me.btnF7.Size = New System.Drawing.Size(75, 75)
-        Me.btnF7.TabIndex = 59
+        Me.btnF7.TabIndex = 53
         Me.btnF7.UseVisualStyleBackColor = true
         '
         'btnE7
@@ -512,7 +512,7 @@ Partial Class Po_Go
         Me.btnE7.Location = New System.Drawing.Point(336, 498)
         Me.btnE7.Name = "btnE7"
         Me.btnE7.Size = New System.Drawing.Size(75, 75)
-        Me.btnE7.TabIndex = 58
+        Me.btnE7.TabIndex = 52
         Me.btnE7.UseVisualStyleBackColor = true
         '
         'btnD7
@@ -520,7 +520,7 @@ Partial Class Po_Go
         Me.btnD7.Location = New System.Drawing.Point(255, 498)
         Me.btnD7.Name = "btnD7"
         Me.btnD7.Size = New System.Drawing.Size(75, 75)
-        Me.btnD7.TabIndex = 57
+        Me.btnD7.TabIndex = 51
         Me.btnD7.UseVisualStyleBackColor = true
         '
         'btnC7
@@ -528,7 +528,7 @@ Partial Class Po_Go
         Me.btnC7.Location = New System.Drawing.Point(174, 498)
         Me.btnC7.Name = "btnC7"
         Me.btnC7.Size = New System.Drawing.Size(75, 75)
-        Me.btnC7.TabIndex = 56
+        Me.btnC7.TabIndex = 50
         Me.btnC7.UseVisualStyleBackColor = true
         '
         'btnB7
@@ -536,7 +536,7 @@ Partial Class Po_Go
         Me.btnB7.Location = New System.Drawing.Point(93, 498)
         Me.btnB7.Name = "btnB7"
         Me.btnB7.Size = New System.Drawing.Size(75, 75)
-        Me.btnB7.TabIndex = 55
+        Me.btnB7.TabIndex = 49
         Me.btnB7.UseVisualStyleBackColor = true
         '
         'btnA7
@@ -544,7 +544,7 @@ Partial Class Po_Go
         Me.btnA7.Location = New System.Drawing.Point(12, 498)
         Me.btnA7.Name = "btnA7"
         Me.btnA7.Size = New System.Drawing.Size(75, 75)
-        Me.btnA7.TabIndex = 54
+        Me.btnA7.TabIndex = 48
         Me.btnA7.UseVisualStyleBackColor = true
         '
         'btnH8
@@ -552,7 +552,7 @@ Partial Class Po_Go
         Me.btnH8.Location = New System.Drawing.Point(579, 579)
         Me.btnH8.Name = "btnH8"
         Me.btnH8.Size = New System.Drawing.Size(75, 75)
-        Me.btnH8.TabIndex = 70
+        Me.btnH8.TabIndex = 63
         Me.btnH8.UseVisualStyleBackColor = true
         '
         'btnG8
@@ -560,7 +560,7 @@ Partial Class Po_Go
         Me.btnG8.Location = New System.Drawing.Point(498, 579)
         Me.btnG8.Name = "btnG8"
         Me.btnG8.Size = New System.Drawing.Size(75, 75)
-        Me.btnG8.TabIndex = 69
+        Me.btnG8.TabIndex = 62
         Me.btnG8.UseVisualStyleBackColor = true
         '
         'btnF8
@@ -568,7 +568,7 @@ Partial Class Po_Go
         Me.btnF8.Location = New System.Drawing.Point(417, 579)
         Me.btnF8.Name = "btnF8"
         Me.btnF8.Size = New System.Drawing.Size(75, 75)
-        Me.btnF8.TabIndex = 68
+        Me.btnF8.TabIndex = 61
         Me.btnF8.UseVisualStyleBackColor = true
         '
         'btnE8
@@ -576,7 +576,7 @@ Partial Class Po_Go
         Me.btnE8.Location = New System.Drawing.Point(336, 579)
         Me.btnE8.Name = "btnE8"
         Me.btnE8.Size = New System.Drawing.Size(75, 75)
-        Me.btnE8.TabIndex = 67
+        Me.btnE8.TabIndex = 60
         Me.btnE8.UseVisualStyleBackColor = true
         '
         'btnD8
@@ -584,7 +584,7 @@ Partial Class Po_Go
         Me.btnD8.Location = New System.Drawing.Point(255, 579)
         Me.btnD8.Name = "btnD8"
         Me.btnD8.Size = New System.Drawing.Size(75, 75)
-        Me.btnD8.TabIndex = 66
+        Me.btnD8.TabIndex = 59
         Me.btnD8.UseVisualStyleBackColor = true
         '
         'btnC8
@@ -592,7 +592,7 @@ Partial Class Po_Go
         Me.btnC8.Location = New System.Drawing.Point(174, 579)
         Me.btnC8.Name = "btnC8"
         Me.btnC8.Size = New System.Drawing.Size(75, 75)
-        Me.btnC8.TabIndex = 65
+        Me.btnC8.TabIndex = 58
         Me.btnC8.UseVisualStyleBackColor = true
         '
         'btnB8
@@ -600,7 +600,7 @@ Partial Class Po_Go
         Me.btnB8.Location = New System.Drawing.Point(93, 579)
         Me.btnB8.Name = "btnB8"
         Me.btnB8.Size = New System.Drawing.Size(75, 75)
-        Me.btnB8.TabIndex = 64
+        Me.btnB8.TabIndex = 57
         Me.btnB8.UseVisualStyleBackColor = true
         '
         'btnA8
@@ -608,7 +608,7 @@ Partial Class Po_Go
         Me.btnA8.Location = New System.Drawing.Point(12, 579)
         Me.btnA8.Name = "btnA8"
         Me.btnA8.Size = New System.Drawing.Size(75, 75)
-        Me.btnA8.TabIndex = 63
+        Me.btnA8.TabIndex = 56
         Me.btnA8.UseVisualStyleBackColor = true
         '
         'btnRestart
@@ -617,7 +617,7 @@ Partial Class Po_Go
         Me.btnRestart.Location = New System.Drawing.Point(12, 719)
         Me.btnRestart.Name = "btnRestart"
         Me.btnRestart.Size = New System.Drawing.Size(75, 23)
-        Me.btnRestart.TabIndex = 81
+        Me.btnRestart.TabIndex = 66
         Me.btnRestart.Text = "Restart"
         Me.btnRestart.UseVisualStyleBackColor = true
         '
@@ -629,7 +629,7 @@ Partial Class Po_Go
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.ReadOnly = true
         Me.txtStatus.Size = New System.Drawing.Size(561, 20)
-        Me.txtStatus.TabIndex = 82
+        Me.txtStatus.TabIndex = 67
         '
         'pbxRedIcon
         '
@@ -661,7 +661,7 @@ Partial Class Po_Go
         Me.lblRedScore.Location = New System.Drawing.Point(68, 677)
         Me.lblRedScore.Name = "lblRedScore"
         Me.lblRedScore.Size = New System.Drawing.Size(20, 24)
-        Me.lblRedScore.TabIndex = 85
+        Me.lblRedScore.TabIndex = 64
         Me.lblRedScore.Text = "0"
         '
         'lblBlackScore
@@ -671,7 +671,7 @@ Partial Class Po_Go
         Me.lblBlackScore.Location = New System.Drawing.Point(437, 677)
         Me.lblBlackScore.Name = "lblBlackScore"
         Me.lblBlackScore.Size = New System.Drawing.Size(161, 24)
-        Me.lblBlackScore.TabIndex = 86
+        Me.lblBlackScore.TabIndex = 65
         Me.lblBlackScore.Text = "0"
         Me.lblBlackScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
