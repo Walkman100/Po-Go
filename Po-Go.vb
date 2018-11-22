@@ -35,34 +35,50 @@ Public Partial Class Po_Go
         If DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Red Or DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Black Then
             txtStatus.Text = currentTurn.ToString & " cannot play there: Existing Piece"
             
-        ElseIf ProcessLeft(senderName, True) Or ProcessRight(senderName, True) Or ProcessUp(senderName, True) Or ProcessDown(senderName, True) Or _
-          ProcessUpLeft(senderName, True) Or ProcessUpRight(senderName, True) Or ProcessDownLeft(senderName, True) Or ProcessDownRight(senderName, True)
-            
-            txtStatus.Text = currentTurn.ToString & " playing to " & senderName & ". "
-            
-            ProcessLeft(senderName)
-            ProcessRight(senderName)
-            ProcessUp(senderName)
-            ProcessDown(senderName)
-            ProcessUpLeft(senderName)
-            ProcessUpRight(senderName)
-            ProcessDownLeft(senderName)
-            ProcessDownRight(senderName)
-            
-            If currentTurn = Player.Red Then
-                SetRed(GetButton(senderName))
-                SetTurn(Player.Black)
-            ElseIf currentTurn = Player.Black
-                SetBlack(GetButton(senderName))
-                SetTurn(Player.Red)
+        Else
+            Dim takenPieces As Boolean = False
+            If CheckLeft(senderName) Then: takenPieces = True
+                ProcessLeft(senderName)
+            End If
+            If CheckRight(senderName) Then: takenPieces = True
+                ProcessRight(senderName)
+            End If
+            If CheckUp(senderName) Then: takenPieces = True
+                ProcessUp(senderName)
+            End If
+            If CheckDown(senderName) Then: takenPieces = True
+                ProcessDown(senderName)
+            End If
+            If CheckUpLeft(senderName) Then: takenPieces = True
+                ProcessUpLeft(senderName)
+            End If
+            If CheckUpRight(senderName) Then: takenPieces = True
+                ProcessUpRight(senderName)
+            End If
+            If CheckDownLeft(senderName) Then: takenPieces = True
+                ProcessDownLeft(senderName)
+            End If
+            If CheckDownRight(senderName) Then: takenPieces = True
+                ProcessDownRight(senderName)
             End If
             
-            txtStatus.Text &= "Old Scores: Red: " & lblRedScore.Text & " Black: " & lblBlackScore.Text & " "
-            
-            scoreCalculate()
-            
-        Else
-            txtStatus.Text = "No pieces to take for " & currentTurn.ToString & " at " & senderName & "!"
+            If takenPieces Then
+                txtStatus.Text = currentTurn.ToString & " playing to " & senderName & ". "
+                
+                If currentTurn = Player.Red Then
+                    SetRed(GetButton(senderName))
+                    SetTurn(Player.Black)
+                ElseIf currentTurn = Player.Black
+                    SetBlack(GetButton(senderName))
+                    SetTurn(Player.Red)
+                End If
+                
+                txtStatus.Text &= "Old Scores: Red: " & lblRedScore.Text & " Black: " & lblBlackScore.Text & " "
+                
+                scoreCalculate()
+            Else
+                txtStatus.Text = "No pieces to take for " & currentTurn.ToString & " at " & senderName & "!"
+            End If
         End If
     End Sub
     
@@ -85,7 +101,7 @@ Public Partial Class Po_Go
         SetTurn(Player.Red)
     End Sub
     
-    ' ==================== Checking if player can place and doing the place ====================
+    ' ==================== Checking if player can place ====================
     
     '       A   B   C   D   E   F   G   H
     '  1    A1  B1  C1  D1  E1  F1  G1  H1
@@ -104,7 +120,7 @@ Public Partial Class Po_Go
     
     ' Orthogonal Directions
     
-    Function ProcessLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckLeft(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim columnLeft As Char = Chr(Asc(column) - 1)
@@ -115,8 +131,6 @@ Public Partial Class Po_Go
             For i = Asc(columnLeft) To 65 Step -1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(Chr(i) & row), currentTurn)
                 End If
             Next
             
@@ -126,7 +140,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckRight(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim columnRight As Char = Chr(Asc(column) + 1)
@@ -137,8 +151,6 @@ Public Partial Class Po_Go
             For i = Asc(columnRight) To 72 Step 1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(Chr(i) & row), currentTurn)
                 End If
             Next
             
@@ -148,7 +160,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessUp(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckUp(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowUp As Integer = row - 1
@@ -159,8 +171,6 @@ Public Partial Class Po_Go
             For i = rowUp To 1 Step -1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(column & i), currentTurn)
                 End If
             Next
             
@@ -170,7 +180,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessDown(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckDown(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowDown As Integer = row + 1
@@ -181,8 +191,6 @@ Public Partial Class Po_Go
             For i = rowDown To 8 Step 1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(column & i), currentTurn)
                 End If
             Next
             
@@ -194,7 +202,7 @@ Public Partial Class Po_Go
     
     ' Diagonally
     
-    Function ProcessUpLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckUpLeft(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowUp As Integer = row - 1
@@ -206,8 +214,6 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(columnLeft & rowUp), currentTurn)
                 End If
                 
                 rowUp -= 1
@@ -220,7 +226,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessUpRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckUpRight(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowUp As Integer = row - 1
@@ -232,8 +238,6 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnRight & rowUp).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(columnRight & rowUp), currentTurn)
                 End If
                 
                 rowUp -= 1
@@ -246,7 +250,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessDownLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckDownLeft(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowDown As Integer = row + 1
@@ -258,8 +262,6 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(columnLeft & rowDown), currentTurn)
                 End If
                 
                 rowDown += 1
@@ -272,7 +274,7 @@ Public Partial Class Po_Go
         End If
     End Function
     
-    Function ProcessDownRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+    Function CheckDownRight(gridCode As String) As Boolean
         Dim column As Char = gridCode.Chars(0)
         Dim row As Integer = Integer.Parse(gridCode.Chars(1))
         Dim rowDown As Integer = row + 1
@@ -284,8 +286,6 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnRight & rowDown).Tag, Player) = currentTurn Then
                     Return True
-                ElseIf checkOnly = False
-                    SetColour(GetButton(columnRight & rowDown), currentTurn)
                 End If
                 
                 rowDown += 1
@@ -297,6 +297,131 @@ Public Partial Class Po_Go
             Return False
         End If
     End Function
+    
+    ' ==================== Doing the placement ====================
+    ' Orthogonal Directions
+    
+    Sub ProcessLeft(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        For i = Asc(columnLeft) To 65 Step -1
+            If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
+                Exit For
+            End If
+            SetColour(GetButton(Chr(i) & row), currentTurn)
+        Next
+    End Sub
+    
+    Sub ProcessRight(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        For i = Asc(columnRight) To 72 Step 1
+            If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
+                Exit For
+            End If
+            SetColour(GetButton(Chr(i) & row), currentTurn)
+        Next
+    End Sub
+    
+    Sub ProcessUp(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        
+        For i = rowUp To 1 Step -1
+            If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
+                Exit For
+            End If
+            SetColour(GetButton(column & i), currentTurn)
+        Next
+    End Sub
+    
+    Sub ProcessDown(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        
+        For i = rowDown To 8 Step 1
+            If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
+                Exit For
+            End If
+            SetColour(GetButton(column & i), currentTurn)
+        Next
+    End Sub
+    
+    ' Diagonally
+    
+    Sub ProcessUpLeft(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        Do While Asc(columnLeft) > 64 AndAlso rowUp > 0
+            If DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = currentTurn Then
+                Exit Do
+            End If
+            SetColour(GetButton(columnLeft & rowUp), currentTurn)
+            
+            rowUp -= 1
+            columnLeft = Chr(Asc(columnLeft) - 1)
+        Loop
+    End Sub
+    
+    Sub ProcessUpRight(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        Do While Asc(columnRight) < 73 AndAlso rowUp > 0
+            If DirectCast(GetButton(columnRight & rowUp).Tag, Player) = currentTurn Then
+                Exit Do
+            End If
+            SetColour(GetButton(columnRight & rowUp), currentTurn)
+            
+            rowUp -= 1
+            columnRight = Chr(Asc(columnRight) + 1)
+        Loop
+    End Sub
+    
+    Sub ProcessDownLeft(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        Do While Asc(columnLeft) > 64 AndAlso rowDown < 9
+            If DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = currentTurn Then
+                Exit Do
+            End If
+            SetColour(GetButton(columnLeft & rowDown), currentTurn)
+            
+            rowDown += 1
+            columnLeft = Chr(Asc(columnLeft) - 1)
+        Loop
+    End Sub
+    
+    Sub ProcessDownRight(gridCode As String)
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        Do While Asc(columnRight) < 73 AndAlso rowDown < 9
+            If DirectCast(GetButton(columnRight & rowDown).Tag, Player) = currentTurn Then
+                Exit Do
+            End If
+            SetColour(GetButton(columnRight & rowDown), currentTurn)
+            
+            rowDown += 1
+            columnRight = Chr(Asc(columnRight) + 1)
+        Loop
+    End Sub
     
     ' ==================== Helper Subs ====================
     
