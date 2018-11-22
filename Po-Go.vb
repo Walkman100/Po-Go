@@ -60,6 +60,203 @@ Public Partial Class Po_Go
         SetTurn(Player.Red)
     End Sub
     
+    ' ==================== Checking if player can place and doing the place ====================
+    
+    '       A   B   C   D   E   F   G   H
+    '  1    A1  B1  C1  D1  E1  F1  G1  H1
+    '  2    A2  B2  C2  D2  E2  F2  G2  H2
+    '  3    A3  B3  C3  D3  E3  F3  G3  H3  e.t.c.
+    
+    Function opponentColour As Player
+        If currentTurn = Player.Red Then
+            Return Player.Black
+        ElseIf currentTurn = Player.Black Then
+            Return Player.Red
+        Else
+            Return Player.None
+        End If
+    End Function
+    
+    ' Orthogonal Directions
+    
+    Function ProcessLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        If column = "A" Or column = "B" Then
+            Return False
+        ElseIf DirectCast(GetButton(columnLeft & row).Tag, Player) = opponentColour
+            For i = Asc(columnLeft) To 65 Step -1
+                If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+            Next
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        If column = "G" Or column = "H" Then
+            Return False
+        ElseIf DirectCast(GetButton(columnRight & row).Tag, Player) = opponentColour
+            For i = Asc(columnRight) To 72 Step 1
+                If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+            Next
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessUp(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        
+        If row = 1 Or row = 2 Then
+            Return False
+        ElseIf DirectCast(GetButton(column & rowUp).Tag, Player) = opponentColour Then
+            For i = rowUp To 1 Step -1
+                If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+            Next
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessDown(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        
+        If row = 7 Or row = 8 Then
+            Return False
+        ElseIf DirectCast(GetButton(column & rowDown).Tag, Player) = opponentColour Then
+            For i = rowDown To 8 Step 1
+                If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+            Next
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    ' Diagonally
+    
+    Function ProcessUpLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        If column = "A" Or column = "B" Or row = 1 Or row = 2 Then
+            Return False
+        ElseIf DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = opponentColour
+            Do While Asc(columnLeft) > 64 AndAlso rowUp > 0
+                If DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+                
+                rowUp -= 1
+                columnLeft = Chr(Asc(columnLeft) - 1)
+            Loop
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessUpRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowUp As Integer = row - 1
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        If column = "G" Or column = "H" Or row = 1 Or row = 2 Then
+            Return False
+        ElseIf DirectCast(GetButton(columnRight & rowUp).Tag, Player) = opponentColour
+            Do While Asc(columnRight) < 73 AndAlso rowUp > 0
+                If DirectCast(GetButton(columnRight & rowUp).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+                
+                rowUp -= 1
+                columnRight = Chr(Asc(columnRight) + 1)
+            Loop
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessDownLeft(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        Dim columnLeft As Char = Chr(Asc(column) - 1)
+        
+        If column = "A" Or column = "B" Or row = 7 Or row = 8 Then
+            Return False
+        ElseIf DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = opponentColour
+            Do While Asc(columnLeft) > 64 AndAlso rowDown < 9
+                If DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+                
+                rowDown += 1
+                columnLeft = Chr(Asc(columnLeft) - 1)
+            Loop
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
+    Function ProcessDownRight(gridCode As String, Optional checkOnly As Boolean = False) As Boolean
+        Dim column As Char = gridCode.Chars(0)
+        Dim row As Integer = Integer.Parse(gridCode.Chars(1))
+        Dim rowDown As Integer = row + 1
+        Dim columnRight As Char = Chr(Asc(column) + 1)
+        
+        If column = "G" Or column = "H" Or row = 7 Or row = 8 Then
+            Return False
+        ElseIf DirectCast(GetButton(columnRight & rowDown).Tag, Player) = opponentColour
+            Do While Asc(columnRight) < 73 AndAlso rowDown < 9
+                If DirectCast(GetButton(columnRight & rowDown).Tag, Player) = currentTurn Then
+                    Return True
+                End If
+                
+                rowDown += 1
+                columnRight = Chr(Asc(columnRight) + 1)
+            Loop
+            
+            Return False
+        Else
+            Return False
+        End If
+    End Function
+    
     ' ==================== Helper Subs ====================
     
     Sub scoreCalculate()
