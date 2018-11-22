@@ -32,15 +32,29 @@ Public Partial Class Po_Go
         Dim senderName As String = CType(sender, Button).Name
         senderName = senderName.Substring(3)
         
-        If currentTurn = Player.Red Then
-            SetRed(GetButton(senderName))
-            SetTurn(Player.Black)
-        ElseIf currentTurn = Player.Black
-            SetBlack(GetButton(senderName))
-            SetTurn(Player.Red)
+        If DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Red Or DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Black Then
+            txtStatus.Text = currentTurn.ToString & " cannot play there: Existing Piece"
+            
+        ElseIf ProcessLeft(senderName, True) Or ProcessRight(senderName, True) Or ProcessUp(senderName, True) Or ProcessDown(senderName, True) Or _
+          ProcessUpLeft(senderName, True) Or ProcessUpRight(senderName, True) Or ProcessDownLeft(senderName, True) Or ProcessDownRight(senderName, True)
+            
+            txtStatus.Text = currentTurn.ToString & " playing to " & senderName & ". "
+            
+            If currentTurn = Player.Red Then
+                SetRed(GetButton(senderName))
+                SetTurn(Player.Black)
+            ElseIf currentTurn = Player.Black
+                SetBlack(GetButton(senderName))
+                SetTurn(Player.Red)
+            End If
+            
+            txtStatus.Text &= "Old Scores: Red: " & lblRedScore.Text & " Black: " & lblBlackScore.Text & " "
+            
+            scoreCalculate()
+            
+        Else
+            txtStatus.Text = "No pieces to take for " & currentTurn.ToString & " at " & senderName & "!"
         End If
-        
-        scoreCalculate()
     End Sub
     
     Sub btnRestart_Click() Handles btnRestart.Click
@@ -56,6 +70,8 @@ Public Partial Class Po_Go
         SetRed(btnE5)
         
         scoreCalculate()
+        
+        txtStatus.Text = ""
         
         SetTurn(Player.Red)
     End Sub
@@ -298,17 +314,17 @@ Public Partial Class Po_Go
         If playerColor = Player.Red Then
             pbxRedIcon.Image = Resources.dragon_red_selected
             pbxBlackIcon.Image = Resources.dragon_black
-            txtStatus.Text = "Red's Turn!"
+            txtStatus.Text &= "Red's Turn! "
             
         ElseIf playerColor = Player.Black Then
             pbxRedIcon.Image = Resources.dragon_red
             pbxBlackIcon.Image = Resources.dragon_black_selected
-            txtStatus.Text = "Black's Turn!"
+            txtStatus.Text &= "Black's Turn! "
             
         ElseIf playerColor = Player.None Then
             pbxRedIcon.Image = Resources.dragon_red
             pbxBlackIcon.Image = Resources.dragon_black
-            txtStatus.Text = "Game Over"
+            txtStatus.Text &= "Game Over"
         End If
         
     End Sub
