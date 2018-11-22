@@ -750,8 +750,8 @@ Partial Class Po_Go
         Me.Controls.Add(Me.btnC1)
         Me.Controls.Add(Me.btnB1)
         Me.Controls.Add(Me.btnA1)
+        Me.Icon = Global.Po_Go.Resources.dragon_outlined
         Me.Name = "Po_Go"
-        Me.ShowIcon = false
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Po-Go"
         CType(Me.pbxRedIcon,System.ComponentModel.ISupportInitialize).EndInit

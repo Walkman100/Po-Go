@@ -13,6 +13,7 @@
     <OptionInfer>On</OptionInfer>
     <ApplicationManifest>Properties\App.manifest</ApplicationManifest>
     <NoWin32Manifest>False</NoWin32Manifest>
+    <ApplicationIcon>Properties\dragon-withAlpha-outlined-x256.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
