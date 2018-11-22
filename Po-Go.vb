@@ -37,28 +37,36 @@ Public Partial Class Po_Go
             
         Else
             Dim takenPieces As Boolean = False
-            If CheckLeft(senderName) Then: takenPieces = True
+            If CheckLeft(senderName) Then
+                takenPieces = True
                 ProcessLeft(senderName)
             End If
-            If CheckRight(senderName) Then: takenPieces = True
+            If CheckRight(senderName) Then
+                takenPieces = True
                 ProcessRight(senderName)
             End If
-            If CheckUp(senderName) Then: takenPieces = True
+            If CheckUp(senderName) Then
+                takenPieces = True
                 ProcessUp(senderName)
             End If
-            If CheckDown(senderName) Then: takenPieces = True
+            If CheckDown(senderName) Then
+                takenPieces = True
                 ProcessDown(senderName)
             End If
-            If CheckUpLeft(senderName) Then: takenPieces = True
+            If CheckUpLeft(senderName) Then
+                takenPieces = True
                 ProcessUpLeft(senderName)
             End If
-            If CheckUpRight(senderName) Then: takenPieces = True
+            If CheckUpRight(senderName) Then
+                takenPieces = True
                 ProcessUpRight(senderName)
             End If
-            If CheckDownLeft(senderName) Then: takenPieces = True
+            If CheckDownLeft(senderName) Then
+                takenPieces = True
                 ProcessDownLeft(senderName)
             End If
-            If CheckDownRight(senderName) Then: takenPieces = True
+            If CheckDownRight(senderName) Then
+                takenPieces = True
                 ProcessDownRight(senderName)
             End If
             
@@ -76,6 +84,8 @@ Public Partial Class Po_Go
                 txtStatus.Text &= "Old Scores: Red: " & lblRedScore.Text & " Black: " & lblBlackScore.Text & " "
                 
                 scoreCalculate()
+                
+                checkWin()
             Else
                 txtStatus.Text = "No pieces to take for " & currentTurn.ToString & " at " & senderName & "!"
             End If
@@ -443,6 +453,26 @@ Public Partial Class Po_Go
         lblBlackScore.Text = blackScore.ToString
     End Sub
     
+    Sub checkWin()
+        For i = 65 To 72
+            For j = 1 To 8
+                If DirectCast(GetButton(Chr(i) & j).Tag, Player) = Player.None Then
+                    Exit Sub
+                End If
+            Next
+        Next
+        
+        SetTurn(Player.None)
+        
+        If Integer.Parse(lblRedScore.Text) > Integer.Parse(lblBlackScore.Text) Then
+            txtStatus.Text &= "Red Wins!"
+        ElseIf Integer.Parse(lblBlackScore.Text) > Integer.Parse(lblRedScore.Text) Then
+            txtStatus.Text &= "Black Wins!"
+        ElseIf Integer.Parse(lblRedScore.Text) = Integer.Parse(lblBlackScore.Text) Then
+            txtStatus.Text &= "Tie!"
+        End If
+    End Sub
+    
     Sub SetRed(btn As Button)
         SetColour(btn, Player.Red)
     End Sub
@@ -483,7 +513,7 @@ Public Partial Class Po_Go
         ElseIf playerColour = Player.None Then
             pbxRedIcon.Image = Resources.dragon_red
             pbxBlackIcon.Image = Resources.dragon_black
-            txtStatus.Text &= "Game Over"
+            txtStatus.Text = "Game Over. "
         End If
         
     End Sub
