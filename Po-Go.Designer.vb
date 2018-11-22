@@ -89,14 +89,14 @@ Partial Class Po_Go
         Me.btnC8 = New System.Windows.Forms.Button()
         Me.btnB8 = New System.Windows.Forms.Button()
         Me.btnA8 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
+        Me.btnRestart = New System.Windows.Forms.Button()
         Me.txtStatus = New System.Windows.Forms.TextBox()
         Me.pbxRedIcon = New System.Windows.Forms.PictureBox()
-        Me.pbxWhiteIcon = New System.Windows.Forms.PictureBox()
+        Me.pbxBlackIcon = New System.Windows.Forms.PictureBox()
         Me.lblRedScore = New System.Windows.Forms.Label()
-        Me.lblWhiteScore = New System.Windows.Forms.Label()
+        Me.lblBlackScore = New System.Windows.Forms.Label()
         CType(Me.pbxRedIcon,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.pbxWhiteIcon,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.pbxBlackIcon,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'btnA1
@@ -611,15 +611,15 @@ Partial Class Po_Go
         Me.btnA8.TabIndex = 63
         Me.btnA8.UseVisualStyleBackColor = true
         '
-        'button1
+        'btnRestart
         '
-        Me.button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.button1.Location = New System.Drawing.Point(12, 719)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(75, 23)
-        Me.button1.TabIndex = 81
-        Me.button1.Text = "Restart"
-        Me.button1.UseVisualStyleBackColor = true
+        Me.btnRestart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.btnRestart.Location = New System.Drawing.Point(12, 719)
+        Me.btnRestart.Name = "btnRestart"
+        Me.btnRestart.Size = New System.Drawing.Size(75, 23)
+        Me.btnRestart.TabIndex = 81
+        Me.btnRestart.Text = "Restart"
+        Me.btnRestart.UseVisualStyleBackColor = true
         '
         'txtStatus
         '
@@ -634,52 +634,58 @@ Partial Class Po_Go
         'pbxRedIcon
         '
         Me.pbxRedIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.pbxRedIcon.Image = Global.Po_Go.Resources.dragon_red
         Me.pbxRedIcon.Location = New System.Drawing.Point(12, 663)
         Me.pbxRedIcon.Name = "pbxRedIcon"
         Me.pbxRedIcon.Size = New System.Drawing.Size(50, 50)
+        Me.pbxRedIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbxRedIcon.TabIndex = 83
         Me.pbxRedIcon.TabStop = false
         '
-        'pbxWhiteIcon
+        'pbxBlackIcon
         '
-        Me.pbxWhiteIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.pbxWhiteIcon.Location = New System.Drawing.Point(604, 663)
-        Me.pbxWhiteIcon.Name = "pbxWhiteIcon"
-        Me.pbxWhiteIcon.Size = New System.Drawing.Size(50, 50)
-        Me.pbxWhiteIcon.TabIndex = 84
-        Me.pbxWhiteIcon.TabStop = false
+        Me.pbxBlackIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.pbxBlackIcon.Image = Global.Po_Go.Resources.dragon_black
+        Me.pbxBlackIcon.Location = New System.Drawing.Point(604, 663)
+        Me.pbxBlackIcon.Name = "pbxBlackIcon"
+        Me.pbxBlackIcon.Size = New System.Drawing.Size(50, 50)
+        Me.pbxBlackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbxBlackIcon.TabIndex = 84
+        Me.pbxBlackIcon.TabStop = false
         '
         'lblRedScore
         '
         Me.lblRedScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
         Me.lblRedScore.AutoSize = true
-        Me.lblRedScore.Location = New System.Drawing.Point(68, 682)
+        Me.lblRedScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 14!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblRedScore.Location = New System.Drawing.Point(68, 677)
         Me.lblRedScore.Name = "lblRedScore"
-        Me.lblRedScore.Size = New System.Drawing.Size(13, 13)
+        Me.lblRedScore.Size = New System.Drawing.Size(20, 24)
         Me.lblRedScore.TabIndex = 85
         Me.lblRedScore.Text = "0"
         '
-        'lblWhiteScore
+        'lblBlackScore
         '
-        Me.lblWhiteScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.lblWhiteScore.AutoSize = true
-        Me.lblWhiteScore.Location = New System.Drawing.Point(585, 682)
-        Me.lblWhiteScore.Name = "lblWhiteScore"
-        Me.lblWhiteScore.Size = New System.Drawing.Size(13, 13)
-        Me.lblWhiteScore.TabIndex = 86
-        Me.lblWhiteScore.Text = "0"
+        Me.lblBlackScore.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.lblBlackScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 14!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblBlackScore.Location = New System.Drawing.Point(437, 677)
+        Me.lblBlackScore.Name = "lblBlackScore"
+        Me.lblBlackScore.Size = New System.Drawing.Size(161, 24)
+        Me.lblBlackScore.TabIndex = 86
+        Me.lblBlackScore.Text = "0"
+        Me.lblBlackScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Po_Go
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(666, 754)
-        Me.Controls.Add(Me.lblWhiteScore)
+        Me.Controls.Add(Me.lblBlackScore)
         Me.Controls.Add(Me.lblRedScore)
-        Me.Controls.Add(Me.pbxWhiteIcon)
+        Me.Controls.Add(Me.pbxBlackIcon)
         Me.Controls.Add(Me.pbxRedIcon)
         Me.Controls.Add(Me.txtStatus)
-        Me.Controls.Add(Me.button1)
+        Me.Controls.Add(Me.btnRestart)
         Me.Controls.Add(Me.btnH8)
         Me.Controls.Add(Me.btnG8)
         Me.Controls.Add(Me.btnF8)
@@ -749,78 +755,78 @@ Partial Class Po_Go
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Po-Go"
         CType(Me.pbxRedIcon,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.pbxWhiteIcon,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.pbxBlackIcon,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
     End Sub
-    Private lblWhiteScore As System.Windows.Forms.Label
+    Private pbxBlackIcon As System.Windows.Forms.PictureBox
+    Private lblBlackScore As System.Windows.Forms.Label
     Private lblRedScore As System.Windows.Forms.Label
-    Private pbxWhiteIcon As System.Windows.Forms.PictureBox
     Private pbxRedIcon As System.Windows.Forms.PictureBox
     Private txtStatus As System.Windows.Forms.TextBox
-    Private button1 As System.Windows.Forms.Button
-    Private btnA8 As System.Windows.Forms.Button
-    Private btnB8 As System.Windows.Forms.Button
-    Private btnC8 As System.Windows.Forms.Button
-    Private btnD8 As System.Windows.Forms.Button
-    Private btnE8 As System.Windows.Forms.Button
-    Private btnF8 As System.Windows.Forms.Button
-    Private btnG8 As System.Windows.Forms.Button
-    Private btnH8 As System.Windows.Forms.Button
-    Private btnA7 As System.Windows.Forms.Button
-    Private btnB7 As System.Windows.Forms.Button
-    Private btnC7 As System.Windows.Forms.Button
-    Private btnD7 As System.Windows.Forms.Button
-    Private btnE7 As System.Windows.Forms.Button
-    Private btnF7 As System.Windows.Forms.Button
-    Private btnG7 As System.Windows.Forms.Button
-    Private btnH7 As System.Windows.Forms.Button
-    Private btnA6 As System.Windows.Forms.Button
-    Private btnB6 As System.Windows.Forms.Button
-    Private btnC6 As System.Windows.Forms.Button
-    Private btnD6 As System.Windows.Forms.Button
-    Private btnE6 As System.Windows.Forms.Button
-    Private btnF6 As System.Windows.Forms.Button
-    Private btnG6 As System.Windows.Forms.Button
-    Private btnH6 As System.Windows.Forms.Button
-    Private btnA5 As System.Windows.Forms.Button
-    Private btnB5 As System.Windows.Forms.Button
-    Private btnC5 As System.Windows.Forms.Button
-    Private btnD5 As System.Windows.Forms.Button
-    Private btnE5 As System.Windows.Forms.Button
-    Private btnF5 As System.Windows.Forms.Button
-    Private btnG5 As System.Windows.Forms.Button
-    Private btnH5 As System.Windows.Forms.Button
-    Private btnA4 As System.Windows.Forms.Button
-    Private btnB4 As System.Windows.Forms.Button
-    Private btnC4 As System.Windows.Forms.Button
-    Private btnD4 As System.Windows.Forms.Button
-    Private btnE4 As System.Windows.Forms.Button
-    Private btnF4 As System.Windows.Forms.Button
-    Private btnG4 As System.Windows.Forms.Button
-    Private btnH4 As System.Windows.Forms.Button
-    Private btnA3 As System.Windows.Forms.Button
-    Private btnB3 As System.Windows.Forms.Button
-    Private btnC3 As System.Windows.Forms.Button
-    Private btnD3 As System.Windows.Forms.Button
-    Private btnE3 As System.Windows.Forms.Button
-    Private btnF3 As System.Windows.Forms.Button
-    Private btnG3 As System.Windows.Forms.Button
-    Private btnH3 As System.Windows.Forms.Button
-    Private btnA2 As System.Windows.Forms.Button
-    Private btnB2 As System.Windows.Forms.Button
-    Private btnC2 As System.Windows.Forms.Button
-    Private btnD2 As System.Windows.Forms.Button
-    Private btnE2 As System.Windows.Forms.Button
-    Private btnF2 As System.Windows.Forms.Button
-    Private btnG2 As System.Windows.Forms.Button
-    Private btnH2 As System.Windows.Forms.Button
-    Private btnH1 As System.Windows.Forms.Button
-    Private btnG1 As System.Windows.Forms.Button
-    Private btnF1 As System.Windows.Forms.Button
-    Private btnE1 As System.Windows.Forms.Button
-    Private btnD1 As System.Windows.Forms.Button
-    Private btnC1 As System.Windows.Forms.Button
-    Private btnB1 As System.Windows.Forms.Button
-    Private btnA1 As System.Windows.Forms.Button
+    Private WithEvents btnRestart As System.Windows.Forms.Button
+    Private WithEvents btnA8 As System.Windows.Forms.Button
+    Private WithEvents btnB8 As System.Windows.Forms.Button
+    Private WithEvents btnC8 As System.Windows.Forms.Button
+    Private WithEvents btnD8 As System.Windows.Forms.Button
+    Private WithEvents btnE8 As System.Windows.Forms.Button
+    Private WithEvents btnF8 As System.Windows.Forms.Button
+    Private WithEvents btnG8 As System.Windows.Forms.Button
+    Private WithEvents btnH8 As System.Windows.Forms.Button
+    Private WithEvents btnA7 As System.Windows.Forms.Button
+    Private WithEvents btnB7 As System.Windows.Forms.Button
+    Private WithEvents btnC7 As System.Windows.Forms.Button
+    Private WithEvents btnD7 As System.Windows.Forms.Button
+    Private WithEvents btnE7 As System.Windows.Forms.Button
+    Private WithEvents btnF7 As System.Windows.Forms.Button
+    Private WithEvents btnG7 As System.Windows.Forms.Button
+    Private WithEvents btnH7 As System.Windows.Forms.Button
+    Private WithEvents btnA6 As System.Windows.Forms.Button
+    Private WithEvents btnB6 As System.Windows.Forms.Button
+    Private WithEvents btnC6 As System.Windows.Forms.Button
+    Private WithEvents btnD6 As System.Windows.Forms.Button
+    Private WithEvents btnE6 As System.Windows.Forms.Button
+    Private WithEvents btnF6 As System.Windows.Forms.Button
+    Private WithEvents btnG6 As System.Windows.Forms.Button
+    Private WithEvents btnH6 As System.Windows.Forms.Button
+    Private WithEvents btnA5 As System.Windows.Forms.Button
+    Private WithEvents btnB5 As System.Windows.Forms.Button
+    Private WithEvents btnC5 As System.Windows.Forms.Button
+    Private WithEvents btnD5 As System.Windows.Forms.Button
+    Private WithEvents btnE5 As System.Windows.Forms.Button
+    Private WithEvents btnF5 As System.Windows.Forms.Button
+    Private WithEvents btnG5 As System.Windows.Forms.Button
+    Private WithEvents btnH5 As System.Windows.Forms.Button
+    Private WithEvents btnA4 As System.Windows.Forms.Button
+    Private WithEvents btnB4 As System.Windows.Forms.Button
+    Private WithEvents btnC4 As System.Windows.Forms.Button
+    Private WithEvents btnD4 As System.Windows.Forms.Button
+    Private WithEvents btnE4 As System.Windows.Forms.Button
+    Private WithEvents btnF4 As System.Windows.Forms.Button
+    Private WithEvents btnG4 As System.Windows.Forms.Button
+    Private WithEvents btnH4 As System.Windows.Forms.Button
+    Private WithEvents btnA3 As System.Windows.Forms.Button
+    Private WithEvents btnB3 As System.Windows.Forms.Button
+    Private WithEvents btnC3 As System.Windows.Forms.Button
+    Private WithEvents btnD3 As System.Windows.Forms.Button
+    Private WithEvents btnE3 As System.Windows.Forms.Button
+    Private WithEvents btnF3 As System.Windows.Forms.Button
+    Private WithEvents btnG3 As System.Windows.Forms.Button
+    Private WithEvents btnH3 As System.Windows.Forms.Button
+    Private WithEvents btnA2 As System.Windows.Forms.Button
+    Private WithEvents btnB2 As System.Windows.Forms.Button
+    Private WithEvents btnC2 As System.Windows.Forms.Button
+    Private WithEvents btnD2 As System.Windows.Forms.Button
+    Private WithEvents btnE2 As System.Windows.Forms.Button
+    Private WithEvents btnF2 As System.Windows.Forms.Button
+    Private WithEvents btnG2 As System.Windows.Forms.Button
+    Private WithEvents btnH2 As System.Windows.Forms.Button
+    Private WithEvents btnH1 As System.Windows.Forms.Button
+    Private WithEvents btnG1 As System.Windows.Forms.Button
+    Private WithEvents btnF1 As System.Windows.Forms.Button
+    Private WithEvents btnE1 As System.Windows.Forms.Button
+    Private WithEvents btnD1 As System.Windows.Forms.Button
+    Private WithEvents btnC1 As System.Windows.Forms.Button
+    Private WithEvents btnB1 As System.Windows.Forms.Button
+    Private WithEvents btnA1 As System.Windows.Forms.Button
 End Class
