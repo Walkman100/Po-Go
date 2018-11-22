@@ -40,6 +40,15 @@ Public Partial Class Po_Go
             
             txtStatus.Text = currentTurn.ToString & " playing to " & senderName & ". "
             
+            ProcessLeft(senderName)
+            ProcessRight(senderName)
+            ProcessUp(senderName)
+            ProcessDown(senderName)
+            ProcessUpLeft(senderName)
+            ProcessUpRight(senderName)
+            ProcessDownLeft(senderName)
+            ProcessDownRight(senderName)
+            
             If currentTurn = Player.Red Then
                 SetRed(GetButton(senderName))
                 SetTurn(Player.Black)
@@ -106,6 +115,8 @@ Public Partial Class Po_Go
             For i = Asc(columnLeft) To 65 Step -1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(Chr(i) & row), currentTurn)
                 End If
             Next
             
@@ -126,6 +137,8 @@ Public Partial Class Po_Go
             For i = Asc(columnRight) To 72 Step 1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(Chr(i) & row), currentTurn)
                 End If
             Next
             
@@ -146,6 +159,8 @@ Public Partial Class Po_Go
             For i = rowUp To 1 Step -1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(column & i), currentTurn)
                 End If
             Next
             
@@ -166,6 +181,8 @@ Public Partial Class Po_Go
             For i = rowDown To 8 Step 1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(column & i), currentTurn)
                 End If
             Next
             
@@ -189,6 +206,8 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(columnLeft & rowUp), currentTurn)
                 End If
                 
                 rowUp -= 1
@@ -213,6 +232,8 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnRight & rowUp).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(columnRight & rowUp), currentTurn)
                 End If
                 
                 rowUp -= 1
@@ -237,6 +258,8 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(columnLeft & rowDown), currentTurn)
                 End If
                 
                 rowDown += 1
@@ -261,6 +284,8 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnRight & rowDown).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf checkOnly = False
+                    SetColour(GetButton(columnRight & rowDown), currentTurn)
                 End If
                 
                 rowDown += 1
@@ -294,34 +319,43 @@ Public Partial Class Po_Go
     End Sub
     
     Sub SetRed(btn As Button)
-        btn.Image = Resources.dragon_red
-        btn.Tag = Player.Red
+        SetColour(btn, Player.Red)
     End Sub
-    
     Sub SetBlack(btn As Button)
-        btn.Image = Resources.dragon_black
-        btn.Tag = Player.Black
+        SetColour(btn, Player.Black)
     End Sub
-    
     Sub SetClear(btn As Button)
-        btn.Image = Nothing
-        btn.Tag = Player.None
+        SetColour(btn, Player.None)
     End Sub
     
-    Sub SetTurn(playerColor As Player)
-        currentTurn = playerColor
+    Sub SetColour(btn As Button, playerColour As Player)
+        Select Case playerColour
+            Case Player.Red
+                btn.Image = Resources.dragon_red
+                btn.Tag = Player.Red
+            Case Player.Black
+                btn.Image = Resources.dragon_black
+                btn.Tag = Player.Black
+            Case Player.None
+                btn.Image = Nothing
+                btn.Tag = Player.None
+        End Select
+    End Sub
+    
+    Sub SetTurn(playerColour As Player)
+        currentTurn = playerColour
         
-        If playerColor = Player.Red Then
+        If playerColour = Player.Red Then
             pbxRedIcon.Image = Resources.dragon_red_selected
             pbxBlackIcon.Image = Resources.dragon_black
             txtStatus.Text &= "Red's Turn! "
             
-        ElseIf playerColor = Player.Black Then
+        ElseIf playerColour = Player.Black Then
             pbxRedIcon.Image = Resources.dragon_red
             pbxBlackIcon.Image = Resources.dragon_black_selected
             txtStatus.Text &= "Black's Turn! "
             
-        ElseIf playerColor = Player.None Then
+        ElseIf playerColour = Player.None Then
             pbxRedIcon.Image = Resources.dragon_red
             pbxBlackIcon.Image = Resources.dragon_black
             txtStatus.Text &= "Game Over"
