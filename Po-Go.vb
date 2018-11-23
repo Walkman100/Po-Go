@@ -113,6 +113,42 @@ Public Partial Class Po_Go
         SetTurn(Player.Red)
     End Sub
     
+    Sub gridButtons_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs) Handles _
+      btnA1.PreviewKeyDown, btnA2.PreviewKeyDown, btnA3.PreviewKeyDown, btnA4.PreviewKeyDown, btnA5.PreviewKeyDown, btnA6.PreviewKeyDown, btnA7.PreviewKeyDown, btnA8.PreviewKeyDown, _
+      btnB1.PreviewKeyDown, btnB2.PreviewKeyDown, btnB3.PreviewKeyDown, btnB4.PreviewKeyDown, btnB5.PreviewKeyDown, btnB6.PreviewKeyDown, btnB7.PreviewKeyDown, btnB8.PreviewKeyDown, _
+      btnC1.PreviewKeyDown, btnC2.PreviewKeyDown, btnC3.PreviewKeyDown, btnC4.PreviewKeyDown, btnC5.PreviewKeyDown, btnC6.PreviewKeyDown, btnC7.PreviewKeyDown, btnC8.PreviewKeyDown, _
+      btnD1.PreviewKeyDown, btnD2.PreviewKeyDown, btnD3.PreviewKeyDown, btnD4.PreviewKeyDown, btnD5.PreviewKeyDown, btnD6.PreviewKeyDown, btnD7.PreviewKeyDown, btnD8.PreviewKeyDown, _
+      btnE1.PreviewKeyDown, btnE2.PreviewKeyDown, btnE3.PreviewKeyDown, btnE4.PreviewKeyDown, btnE5.PreviewKeyDown, btnE6.PreviewKeyDown, btnE7.PreviewKeyDown, btnE8.PreviewKeyDown, _
+      btnF1.PreviewKeyDown, btnF2.PreviewKeyDown, btnF3.PreviewKeyDown, btnF4.PreviewKeyDown, btnF5.PreviewKeyDown, btnF6.PreviewKeyDown, btnF7.PreviewKeyDown, btnF8.PreviewKeyDown, _
+      btnG1.PreviewKeyDown, btnG2.PreviewKeyDown, btnG3.PreviewKeyDown, btnG4.PreviewKeyDown, btnG5.PreviewKeyDown, btnG6.PreviewKeyDown, btnG7.PreviewKeyDown, btnG8.PreviewKeyDown, _
+      btnH1.PreviewKeyDown, btnH2.PreviewKeyDown, btnH3.PreviewKeyDown, btnH4.PreviewKeyDown, btnH5.PreviewKeyDown, btnH6.PreviewKeyDown, btnH7.PreviewKeyDown, btnH8.PreviewKeyDown
+        If e.KeyCode = Keys.Up Then
+            Dim gridCode As String = CType(sender, Button).Name.Substring(3)
+            gridCode = gridCode.Chars(0) & ( Integer.Parse(gridCode.Chars(1)) -1 )
+            
+            ' move row back to the right as the up key moves the row to the left
+            If gridCode.Chars(0) <> "H" Then gridCode = Chr( Asc(gridCode.Chars(0)) +1 ) & gridCode.Chars(1)
+            
+            If gridCode.Chars(1) = "0" Then  ' loop vertically
+                gridCode = gridCode.Chars(0) & "8"
+            End If
+            
+            GetButton(gridCode).Focus
+        ElseIf e.KeyCode = Keys.Down Then
+            Dim gridCode As String = CType(sender, Button).Name.Substring(3)
+            gridCode = gridCode.Chars(0) & ( Integer.Parse(gridCode.Chars(1)) +1 )
+            
+            ' move row back to the left as the down key moves the row to the right
+            If gridCode.Chars(0) <> "A" Then gridCode = Chr( Asc(gridCode.Chars(0)) -1 ) & gridCode.Chars(1)
+            
+            If gridCode.Chars(1) = "9" Then  ' loop vertically
+                gridCode = gridCode.Chars(0) & "1"
+            End If
+            
+            GetButton(gridCode).Focus
+        End If
+    End Sub
+    
     ' ==================== Checking if player can place ====================
     
     '       A   B   C   D   E   F   G   H
