@@ -86,6 +86,8 @@ Public Partial Class Po_Go
                 scoreCalculate()
                 
                 checkWin()
+                
+                checkCanPlace()
             Else
                 txtStatus.Text = "No pieces to take for " & currentTurn.ToString & " at " & senderName & "!"
             End If
@@ -470,6 +472,29 @@ Public Partial Class Po_Go
             txtStatus.Text &= "Black Wins!"
         ElseIf Integer.Parse(lblRedScore.Text) = Integer.Parse(lblBlackScore.Text) Then
             txtStatus.Text &= "Tie!"
+        End If
+    End Sub
+    
+    Sub checkCanPlace()
+        For i = 65 To 72
+            For j = 1 To 8
+                If DirectCast(GetButton(Chr(i) & j).Tag, Player) = Player.None Then
+                    Dim gridCodeToCheck As String = GetButton(Chr(i) & j).Name.Substring(3)
+                    If CheckLeft(gridCodeToCheck) Then Exit Sub
+                    If CheckRight(gridCodeToCheck) Then Exit Sub
+                    If CheckUp(gridCodeToCheck) Then Exit Sub
+                    If CheckDown(gridCodeToCheck) Then Exit Sub
+                    If CheckUpLeft(gridCodeToCheck) Then Exit Sub
+                    If CheckUpRight(gridCodeToCheck) Then Exit Sub
+                    If CheckDownLeft(gridCodeToCheck) Then Exit Sub
+                    If CheckDownRight(gridCodeToCheck) Then Exit Sub
+                End If
+            Next
+        Next
+        
+        If txtStatus.Text.StartsWith("Game Over.") = False Then
+            MsgBox(currentTurn.ToString & " can't play! " & opponentColour.ToString & " goes again...", MsgBoxStyle.Information)
+            SetTurn(opponentColour)
         End If
     End Sub
     
