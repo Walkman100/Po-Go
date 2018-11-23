@@ -33,7 +33,7 @@ Public Partial Class Po_Go
         senderName = senderName.Substring(3)
         
         If DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Red Or DirectCast(DirectCast(sender, Button).Tag, Player) = Player.Black Then
-            txtStatus.Text = currentTurn.ToString & " cannot play there: Existing Piece"
+            txtStatus.Text = currentTurn.ToString & " cannot play in " & senderName & ": Existing Piece"
             
         Else
             Dim takenPieces As Boolean = False
@@ -143,6 +143,8 @@ Public Partial Class Po_Go
             For i = Asc(columnLeft) To 65 Step -1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(Chr(i) & row).Tag, Player) = Player.None Then
+                    Return False
                 End If
             Next
             
@@ -163,6 +165,8 @@ Public Partial Class Po_Go
             For i = Asc(columnRight) To 72 Step 1
                 If DirectCast(GetButton(Chr(i) & row).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(Chr(i) & row).Tag, Player) = Player.None Then
+                    Return False
                 End If
             Next
             
@@ -183,6 +187,8 @@ Public Partial Class Po_Go
             For i = rowUp To 1 Step -1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(column & i).Tag, Player) = Player.None Then
+                    Return False
                 End If
             Next
             
@@ -203,6 +209,8 @@ Public Partial Class Po_Go
             For i = rowDown To 8 Step 1
                 If DirectCast(GetButton(column & i).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(column & i).Tag, Player) = Player.None Then
+                    Return False
                 End If
             Next
             
@@ -226,6 +234,8 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(columnLeft & rowUp).Tag, Player) = Player.None Then
+                    Return False
                 End If
                 
                 rowUp -= 1
@@ -250,6 +260,8 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowUp > 0
                 If DirectCast(GetButton(columnRight & rowUp).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(columnRight & rowUp).Tag, Player) = Player.None Then
+                    Return False
                 End If
                 
                 rowUp -= 1
@@ -274,6 +286,8 @@ Public Partial Class Po_Go
             Do While Asc(columnLeft) > 64 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(columnLeft & rowDown).Tag, Player) = Player.None Then
+                    Return False
                 End If
                 
                 rowDown += 1
@@ -298,6 +312,8 @@ Public Partial Class Po_Go
             Do While Asc(columnRight) < 73 AndAlso rowDown < 9
                 If DirectCast(GetButton(columnRight & rowDown).Tag, Player) = currentTurn Then
                     Return True
+                ElseIf DirectCast(GetButton(columnRight & rowDown).Tag, Player) = Player.None Then
+                    Return False
                 End If
                 
                 rowDown += 1
@@ -494,6 +510,7 @@ Public Partial Class Po_Go
         
         If txtStatus.Text.StartsWith("Game Over.") = False Then
             MsgBox(currentTurn.ToString & " can't play! " & opponentColour.ToString & " goes again...", MsgBoxStyle.Information)
+            txtStatus.Text &= currentTurn.ToString & " can't play! "
             SetTurn(opponentColour)
         End If
     End Sub
